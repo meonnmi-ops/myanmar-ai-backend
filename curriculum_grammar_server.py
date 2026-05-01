@@ -345,6 +345,9 @@ def api_home():
             },
             "GET /api/health": {
                 "description": "စနစ်ကွန်ပျူတာအခြေအနေ"
+            },
+            "GET /api/tool-definitions": {
+                "description": "GLM-5-TURBO Agent Tool Definitions"
             }
         }
     })
@@ -423,6 +426,47 @@ def api_rules():
             }
             for r in RULES
         ]
+    })
+
+
+@app.route("/api/tool-definitions", methods=["GET"])
+def api_tool_definitions():
+    """Return tool definitions for GLM-5-TURBO agent integration"""
+    tools = [
+        {
+            "type": "function",
+            "function": {
+                "name": "check_myanmar_grammar",
+                "description": "ပေးလိုက်သော မြန်မာစာသားအတွင်း အဖြစ်များသော သဒ္ဒါအမှားများ (ပဲ/ဘဲ၊ ကို/အား၊ မှ/က စသည်) ကို စစ်ဆေးပေးသည်။",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "text": {"type": "string", "description": "စစ်ဆေးလိုသော မြန်မာစာသား"}
+                    },
+                    "required": ["text"]
+                }
+            }
+        },
+        {
+            "type": "function",
+            "function": {
+                "name": "get_myanmar_curriculum",
+                "description": "မြန်မာအခြေခံပညာ အတန်းလိုက် သင်ရိုးအချက်အလက်များကို ရယူရန်။",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "grade": {"type": "string", "description": "KG, G1, G2, ..., G11"},
+                        "subject": {"type": "string", "description": "ဘာသာရပ် (optional)"}
+                    },
+                    "required": ["grade"]
+                }
+            }
+        }
+    ]
+    return jsonify({
+        "tools": tools,
+        "status": "success",
+        "base_url": request.base_url.replace("/api/tool-definitions", "")
     })
 
 
