@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: myanmar-ai-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn curriculum_grammar_server:app
+    plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.0"
+      - key: PORT
+        value: "5000"
