@@ -12,6 +12,8 @@ import re
 from datetime import datetime, timezone
 from typing import List, Dict, Any
 
+import requests as http_requests
+
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
@@ -348,6 +350,11 @@ def api_home():
             },
             "GET /api/tool-definitions": {
                 "description": "GLM-5-TURBO Agent Tool Definitions"
+            },
+            "POST /api/termux-exec": {
+                "description": "Termux terminal command execution",
+                "body": {"command": "ls"},
+                "content_type": "application/json"
             }
         }
     })
@@ -463,11 +470,75 @@ def api_tool_definitions():
             }
         }
     ]
+    tools.append({
+        "type": "function",
+        "function": {
+            "name": "exec_myanmar_terminal",
+            "description": "Termux terminal မှာ command တစ်ခုခု run ပြီး result ကို ပြန်ပေးမယ်။ (ဥပမာ - ls, python, npm, git, pkg)",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "command": {"type": "string", "description": "Termux မှာ run ချင်တဲ့ exact command"}
+                },
+                "required": ["command"]
+            }
+        }
+    })
+
     return jsonify({
         "tools": tools,
         "status": "success",
         "base_url": request.base_url.replace("/api/tool-definitions", "")
     })
+
+
+@app.route("/api/termux-exec", methods=["POST"])
+def api_termux_exec():
+    if not request.is_json:
+        return jsonify({"error": "Content-Type must be application/json", "status": "error"}), 400
+
+    data = request.get_json(silent=True)
+    if not data or "command" not in data:
+        return jsonify({"error": "Missing 'command' field", "status": "error"}), 400
+
+    command = data["command"].strip()
+    if not command:
+        return jsonify({"error": "Empty command", "status": "error"}), 400
+
+    # Allowed safe commands whitelist
+    ALLOWED_PREFIXES = [
+        "ls", "pwd", "whoami", "date", "echo", "cat ", "head ",
+        "tail ", "wc ", "grep ", "find ", "python ", "python3 ",
+        "pip ", "npm ", "node ", "git ", "curl ", "wget ",
+        "pkg ", "apt ", "mkdir ", "touch ", "cp ", "mv ",
+        "chmod ", "uname ", "df ", "free ", "ps ", "env ",
+        "which ", "man ", "history", "clear", "help",
+    ]
+
+    # Check if command starts with an allowed prefix
+    cmd_first = command.split()[0] if command.split() else ""
+    allowed = False
+    for prefix in ALLOWED_PREFIXES:
+        if cmd_first == prefix or command.startswith(prefix + " "):
+            allowed = True
+            break
+
+    if not allowed:
+        return jsonify({
+            "error": f"Command '{cmd_first}' is not in the allowed list",
+            "status": "blocked",
+            "allowed_commands": ALLOWED_PREFIXES
+        }), 403
+
+    # Forward to Puter terminal
+    puter_url = os.environ.get("PUTER_EXEC_URL", "https://myanos-terminal.puter.site/exec")
+    try:
+        resp = http_requests.post(puter_url, json={"command": command}, timeout=30)
+        return jsonify(resp.json())
+    except http_requests.exceptions.Timeout:
+        return jsonify({"error": "Puter terminal timeout after 30s", "status": "timeout"}), 504
+    except Exception as e:
+        return jsonify({"error": f"Puter connection failed: {str(e)}", "status": "error"}), 502
 
 
 # ============================================================
