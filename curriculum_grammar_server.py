@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Myanmar AI Backend Server v1.0.0
-Grammar Check + Curriculum Data REST API
+Myanmar AI Backend Server v2.0.0
+Grammar Check + Curriculum Data + NLP Tools REST API
 Deploy on Render.com (free tier)
+NLP: Zawgyi/Unicode, Syllable Tokenizer, Word Tokenizer, Spell Check
 """
 
 import json
@@ -16,6 +17,12 @@ import requests as http_requests
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+
+# Import NLP tools
+from nlp_tools import (
+    zawgyi_to_unicode, unicode_to_zawgyi, detect_encoding,
+    syllable_tokenize, word_tokenize, spell_check, get_module_info
+)
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/*": {"origins": "*"}})
@@ -355,6 +362,29 @@ def api_home():
                 "description": "Termux terminal command execution",
                 "body": {"command": "ls"},
                 "content_type": "application/json"
+            },
+            "POST /api/zawgyi-to-unicode": {
+                "description": "ဇော်ဂျီကို မြန်မာစကားသို့ ပြောင်းလဲခြင်း",
+                "body": {"text": "ဇော်ဂျီစာသား"},
+                "content_type": "application/json"
+            },
+            "POST /api/syllable-tokenize": {
+                "description": "မြန်မာစာကို သီအိုရီများ အဖြစ် ဖွဲ့စည်းခြင်း",
+                "body": {"text": "မြန်မာစာသား"},
+                "content_type": "application/json"
+            },
+            "POST /api/word-tokenize": {
+                "description": "မြန်မာစာကို စကားလုံးများ အဖြစ် ဖွဲ့စည်းခြင်း",
+                "body": {"text": "ကျွန်တော် အလုပ်သွားမယ်"},
+                "content_type": "application/json"
+            },
+            "POST /api/spell-check": {
+                "description": "မြန်မာစာ အကြောင်းစစ် (သဒ္ဒါစစ်ဆေးခြင်း နှင့် အကြုံပြုခြင်း)",
+                "body": {"text": "မစားပဲ မသွားပဲ"},
+                "content_type": "application/json"
+            },
+            "GET /api/nlp-info": {
+                "description": "NLP Tools အချက်အလက်"
             }
         }
     })
@@ -363,11 +393,13 @@ def api_home():
 @app.route("/api/health", methods=["GET"])
 def api_health():
     data = load_curriculum()
+    nlp_info = get_module_info()
     return jsonify({
         "status": "online",
         "uptime": "ok",
         "curriculum_loaded": data is not None,
         "grammar_rules": len(RULES),
+        "nlp_tools": nlp_info,
         "timestamp": datetime.now(timezone.utc).isoformat()
     })
 
@@ -539,6 +571,135 @@ def api_termux_exec():
         return jsonify({"error": "Puter terminal timeout after 30s", "status": "timeout"}), 504
     except Exception as e:
         return jsonify({"error": f"Puter connection failed: {str(e)}", "status": "error"}), 502
+
+
+# ============================================================
+# NLP Tool Routes
+# ============================================================
+
+@app.route("/api/zawgyi-to-unicode", methods=["POST"])
+def api_zawgyi_to_unicode():
+    """Convert Zawgyi-encoded Myanmar text to Unicode standard."""
+    if not request.is_json:
+        return jsonify({"error": "Content-Type must be application/json", "status": "error"}), 400
+
+    body = request.get_json(silent=True)
+    if not body or "text" not in body:
+        return jsonify({
+            "error": "Missing 'text' field in request body",
+            "status": "error",
+            "example": {"text": "ဇော်ဂျီစာသား"}
+        }), 400
+
+    text = body["text"]
+    if not text or not text.strip():
+        return jsonify({"error": "Empty text provided", "status": "error"}), 400
+
+    detected = detect_encoding(text)
+    converted = zawgyi_to_unicode(text)
+
+    return jsonify({
+        "original": text,
+        "unicode": converted,
+        "detected_encoding": detected,
+        "status": "success",
+        "length": len(text)
+    })
+
+
+@app.route("/api/syllable-tokenize", methods=["POST"])
+def api_syllable_tokenize():
+    """Break Myanmar text into syllables."""
+    if not request.is_json:
+        return jsonify({"error": "Content-Type must be application/json", "status": "error"}), 400
+
+    body = request.get_json(silent=True)
+    if not body or "text" not in body:
+        return jsonify({
+            "error": "Missing 'text' field in request body",
+            "status": "error",
+            "example": {"text": "မြန်မာစကား"}
+        }), 400
+
+    text = body["text"]
+    if not text or not text.strip():
+        return jsonify({"error": "Empty text provided", "status": "error"}), 400
+
+    syllables = syllable_tokenize(text)
+
+    return jsonify({
+        "text": text,
+        "syllables": syllables,
+        "count": len(syllables),
+        "status": "success"
+    })
+
+
+@app.route("/api/word-tokenize", methods=["POST"])
+def api_word_tokenize():
+    """Segment Myanmar text into words."""
+    if not request.is_json:
+        return jsonify({"error": "Content-Type must be application/json", "status": "error"}), 400
+
+    body = request.get_json(silent=True)
+    if not body or "text" not in body:
+        return jsonify({
+            "error": "Missing 'text' field in request body",
+            "status": "error",
+            "example": {"text": "ကျွန်တော် အလုပ်သွားမယ်"}
+        }), 400
+
+    text = body["text"]
+    if not text or not text.strip():
+        return jsonify({"error": "Empty text provided", "status": "error"}), 400
+
+    words = word_tokenize(text)
+
+    return jsonify({
+        "text": text,
+        "words": words,
+        "count": len(words),
+        "status": "success"
+    })
+
+
+@app.route("/api/spell-check", methods=["POST"])
+def api_spell_check():
+    """Check Myanmar text for spelling errors."""
+    if not request.is_json:
+        return jsonify({"error": "Content-Type must be application/json", "status": "error"}), 400
+
+    body = request.get_json(silent=True)
+    if not body or "text" not in body:
+        return jsonify({
+            "error": "Missing 'text' field in request body",
+            "status": "error",
+            "example": {"text": "မစားပဲ မသွားပဲ"}
+        }), 400
+
+    text = body["text"]
+    if not text or not text.strip():
+        return jsonify({"error": "Empty text provided", "status": "error"}), 400
+
+    result = spell_check(text)
+
+    return jsonify({
+        "checked_text": result["checked_text"],
+        "errors": result["errors"],
+        "corrections": result["corrections"],
+        "error_count": result["error_count"],
+        "is_correct": result["error_count"] == 0,
+        "status": "success"
+    })
+
+
+@app.route("/api/nlp-info", methods=["GET"])
+def api_nlp_info():
+    """Return information about available NLP tools."""
+    return jsonify({
+        "status": "success",
+        "tools": get_module_info()
+    })
 
 
 # ============================================================
