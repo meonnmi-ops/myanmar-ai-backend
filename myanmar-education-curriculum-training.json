@@ -1,0 +1,657 @@
+{
+  "dataset_info": {
+    "name": "Myanmar Basic Education Curriculum Training Dataset",
+    "version": "1.2.0",
+    "created": "2026-05-01",
+    "last_updated": "2026-05-01",
+    "source": "Compiled by Tr. Hanni Linn and Ministry of Education Myanmar",
+    "description": "Complete Myanmar education system from KG to Grade 11/12 including textbook links, parental guidance, and exam strategies. Designed for Nyanlin AI / MMC training.",
+    "language": "myanmar",
+    "target_ai": "Nyanlin AI / MMC Compiler Training",
+    "total_grades": 12,
+    "technical_note": "Some external links may be broken or require updating. The AI should understand the structure even if links are unavailable."
+  },
+  "main_websites": {
+    "official_curriculum": "http://www.derpt.moe.edu.mm/",
+    "dbebox_resources": "http://mdep.moe.edu.mm/dbebox/",
+    "iqy_technical_college": "http://www.iqytechnicalcollege.com/",
+    "highlight_computer_g11": "http://www.highlightcomputer.com/y712lessons.htm#A",
+    "myanmar_exam_resources": "http://resources.mmoe.myanmarexam.org/",
+    "createmm_english_audio": "https://createmm.org/"
+  },
+  "meta_links": {
+    "description": "Official Myanmar education ministry portals and main source references",
+    "derpt_moe_edu_mm": "http://www.derpt.moe.edu.mm/",
+    "mdep_moe_edu_mm": "http://mdep.moe.edu.mm/dbebox/",
+    "main_source_post": "https://m.facebook.com/story.php?story_fbid=559929708313445&id=100028892617574"
+  },
+  "education_levels": {
+    "primary": {
+      "grades_range": "KG - Grade 5",
+      "description_myanmar": "အရေးကြီးပြီး အခြေခံအားနည်းနေ့သားသမီး ကျေးဇူးတင်ခြင်းနှင့် အခေါ်ဝင်ရည်ရွယ်ချက်",
+      "description_english": "Foundation education focusing on basic literacy, numeracy, and character development"
+    },
+    "middle": {
+      "grades_range": "Grade 6 - Grade 8",
+      "description_myanmar": "အလယ်တိုင်းကျေးဇူးတင်ခြင်း - ကိန်းဂရုတ နှင့် အရည်အသွေးများ ခန့်မှန်းခြင်း",
+      "description_english": "Middle school education with introduction to sciences and humanities"
+    },
+    "high": {
+      "grades_range": "Grade 9 - Grade 11",
+      "description_myanmar": "အလွန်ရှည်လျားသော ကျေးဇူးတင်ခြင်းနှင့် တက္ကသိုလ်ဝင်တန်း အချိန်းပြဿနာ",
+      "description_english": "Advanced high school education preparing for university entrance examination"
+    }
+  },
+  "grades": [
+    {
+      "grade": "KG (Kindergarten)",
+      "grade_local": "ကိုယ်ပိုင်ဖြာ",
+      "level": "primary",
+      "age_range": "3-5",
+      "subjects": [
+        {"name_myanmar": "မြန်မာစာ", "name_english": "Myanmar Language"},
+        {"name_myanmar": "အောက်ပါဘာသာစကား", "name_english": "English Language"},
+        {"name_myanmar": "တွက်ချက်", "name_english": "Mathematics"}
+      ],
+      "notes": "အရောင်ခွဲခြား၊ ပစ္စည်းအခေါ်အဝေါ်၊ ပုံပြင်ဖတ်ပြခြင်း၊ အိမ်တွင်းမှုသင်ပေးခြင်း",
+      "parental_advice": {
+        "do": [
+          "လက်ရှိနေထိုင်မှုအရေးကြီးသော လက်ဝဲလွယ်ကူအားနည်းများကို ဖွင့်လှစ်ပေးပါ - ရုပ်သွင်းခြင်း၊ အရောင်ဖြည့်ခြင်း၊ ကျွန်ုပ်စစ်ခြင်း (Origami)",
+          "ကယ်တင်းပွဲများကို ဖတ်ပေးပါ",
+          "အိမ်ရှင်နယ်မှာ လုပ်ငန်းလမ်းညွှန်ခြင်းကို သားသမီးအား သင့်ကျေမှတ်ပေးပါ",
+          "နေ့စဉ်အတွက် အသေးစိတ် အဆင်သင့်သော အချိန်းလိုက်လံစွာ ပေးပါ"
+        ],
+        "dont": [
+          "ကဲ 'က'၊ 'ခ'၊ 'A'၊ 'B' စတဲ့ လက်သားအကုန်ကို အလိုလို ကူးရမ်းခြင်းကို မပြုပါနဲ့ - အသက်သားအတွက် မကောင်းပါ",
+          "ကိုယ်ပိုင်ဖြာအဆင့်မှာပဲ နှစ်စဉ်ပါဝင်မည့်အတွက် ဖိအားပေးသွားခြင်း မပြုပါနဲ့",
+          "သားသမီးအား အောက်ကျလျှင် ခွဲခြမ်းစိတ်ဖြာပါ"
+        ]
+      },
+      "textbook_links": [
+        {
+          "title": "KG1 Language Guide",
+          "url": "http://resources.mmoe.myanmarexam.org/.../kg1-language-guide.pdf",
+          "file_name": "kg1-language-guide.pdf",
+          "size_mb": 3.64,
+          "description": "ကဗျာ၊ ဘာသာစကား၊ ပုံပြင်၊ ဆရာကိုင် (၁)"
+        },
+        {
+          "title": "KG2 Learning Guide",
+          "url": "http://resources.mmoe.myanmarexam.org/.../kg2-learning-guide.pdf",
+          "file_name": "kg2-learning-guide.pdf",
+          "size_mb": 4.31,
+          "description": "သင်ပြမှုပုံစံ၊ ဆရာလမ်းညွှန် (၂)"
+        },
+        {
+          "title": "KG3 Teacher Guide",
+          "url": "http://resources.mmoe.myanmarexam.org/.../kg3-teacher-guide.pdf",
+          "file_name": "kg3-teacher-guide.pdf",
+          "size_mb": 17.56,
+          "description": "ဆရာလမ်းညွှန် (၃)"
+        }
+      ],
+      "facebook_reference": "https://www.facebook.com/100028892617574/posts/556261515346931/"
+    },
+    {
+      "grade": "Year 1 (G1)",
+      "grade_local": "ပထမတန်း (ထိုင်",
+      "level": "primary",
+      "age_range": "5-6",
+      "subjects": [
+        {"name_myanmar": "မြန်မာစာ", "name_english": "Myanmar", "file_name": "01.Myanmar TB (outline).pdf", "url": "http://www.iqytechnicalcollege.com/01.Myanmar%20TB%20(outline).pdf"},
+        {"name_myanmar": "အင်္ဂလိပ်စာ", "name_english": "English", "file_name": "02.English TB (10-01-2017) (outline).pdf", "url": "http://www.iqytechnicalcollege.com/02.English%20TB%20(10-01-2017)%20(outline).pdf"},
+        {"name_myanmar": "သင်္ချာ", "name_english": "Mathematics", "file_name": "03.Math text book final.pdf", "url": "http://www.iqytechnicalcollege.com/03.Math%20text%20book%20final.pdf"},
+        {"name_myanmar": "သိပ္ပံ", "name_english": "Science", "file_name": "04.Science 9-1-2017 TB.pdf", "url": "http://www.iqytechnicalcollege.com/04.Science%209-1-2017%20TB.pdf"},
+        {"name_myanmar": "လူမှုရေး", "name_english": "Social Studies", "file_name": "05.G-1 Social Study Text book (10-1-2017)(outline).pdf", "url": "http://www.iqytechnicalcollege.com/05.G-1%20Social%20Study%20Text%20book%20(10-1-%202017)(outline).pdf"},
+        {"name_myanmar": "ဘဝတွက်တာ", "name_english": "Life Skills", "file_name": "06-Life Skills TB 10 1 2017.pdf", "url": "http://www.iqytechnicalcollege.com/06-Life%20Skills%20TB%2010%201%202017.pdf"},
+        {"name_myanmar": "စာရိတ္တနှင့် ပြည်သူ့နီတိ", "name_english": "Morality & Civics", "file_name": "07-M&C-TB(FO).pdf", "url": "http://www.iqytechnicalcollege.com/07-M&C-TB(FO).pdf"},
+        {"name_myanmar": "ကာယပညာ", "name_english": "Physical Education", "file_name": "08-PE G1 Textbook 13-1-2017(NCC 4 back)outline.pdf", "url": "http://www.iqytechnicalcollege.com/08-%20PE%20G1%20Textbook%2013-1-2017(NCC%204%20back)outline.pdf"},
+        {"name_myanmar": "ပန်းချီ", "name_english": "Art", "file_name": "09-Art Text book.pdf", "url": "http://www.iqytechnicalcollege.com/09-Art%20Text%20book.pdf"},
+        {"name_myanmar": "ဂီတ", "name_english": "Performing Arts", "file_name": "10-Performing Arts TB 17 1 2017.pdf", "url": "http://www.iqytechnicalcollege.com/10-Performing%20Arts%20TB%2017%201%202017.pdf"}
+      ],
+      "parental_advice": {
+        "do": [
+          "ကိုယ်ပိုင်ဖြာမှာ သင့်ရပ်တည်ခဲ့သော စာလုံးများကို ပြန်လည်ပြောင်းပါ (ဝလုံး၊ စ)",
+          "အသေးစား စာလုံးနှင့် အကြောင်းတစ်ခုတည်းစာများကို ဖတ်ပေးပါ",
+          "ပေါင်းပါ/နိုင်ပါ အခြေခံ တွက်ချက်များကို လေ့လာပေးပါ",
+          "ကိုယ်တိုင်ပိုင်ခွင့်ကို သင့်ကျေမှတ်စွာ လေ့လာအပ်ပါ"
+        ],
+        "dont": [
+          "အထက်မှ အလျော့ကျတဲ့ စာသားများကို ဖြတ်ပြောပေးခြင်းကို မပြုပါ",
+          "အရမ်းလွန်သော တွက်ချက်ပြဿနာများနှင့် ဖော်ထုတ်ပေးခြင်း မပြုပါ"
+        ]
+      },
+      "notes": "ခဲတံကိုင်တတ်၊ စာရေးတတ်၊ KG တွင် သင်ခဲ့ရာများကို ပြန်လည်မေးမြန်းခြင်း၊ စာကောင်းကောင်းဖတ်တတ်ရန်၊ နေ့စဉ်စာဖတ်ခြင်းအလေ့အကျင့်",
+      "facebook_reference": "https://m.facebook.com/story.php?story_fbid=556770145296068&id=100028892617574"
+    },
+    {
+      "grade": "Year 2 (G2)",
+      "grade_local": "ဒုတိယတန်း (ထိုင်",
+      "level": "primary",
+      "age_range": "6-7",
+      "subjects": [
+        {"name_myanmar": "မြန်မာစာ", "name_english": "Myanmar", "url": "http://www.iqytechnicalcollege.com/01.%20G2_Textbook_Myanmar_15_Nov_Outline.pdf"},
+        {"name_myanmar": "အောက်ပါဘာသာစကား", "name_english": "English", "url": "http://www.iqytechnicalcollege.com/02.%20G2_Textbook_English_15_Nov_Outline.pdf"},
+        {"name_myanmar": "တွက်ချက်", "name_english": "Mathematics", "url": "http://www.iqytechnicalcollege.com/03.%20G2_Textbook_Math_15_Nov_Outline.pdf"},
+        {"name_myanmar": "သာသန္တာ", "name_english": "Science", "url": "http://www.iqytechnicalcollege.com/04.%20G2_Textbook_Science_24_Nov_2017_Outline.pdf"},
+        {"name_myanmar": "လူမှုရေး", "name_english": "Social Studies", "url": "http://www.iqytechnicalcollege.com/05.%20G2_Textbook_SocialStudies_28_Nov_Outline.pdf"},
+        {"name_myanmar": "ဘဝအရည်အသွေး", "name_english": "Life Skills", "url": "http://www.iqytechnicalcollege.com/06.%20G2_Textbook_LifeSkills_21_Nov_Outline.pdf"},
+        {"name_myanmar": "ကျေးဇူးတင်ရေးနှင့် ဥပမာရေး", "name_english": "Morality & Civics", "url": "http://www.iqytechnicalcollege.com/07.%20G2_Textbook_MoralityCivics_15_Nov_Outline.pdf"},
+        {"name_myanmar": "ကွန်ပျူတာ", "name_english": "Physical Education", "url": "http://www.iqytechnicalcollege.com/08.%20G2_Textbook_PhysicalEducation_15_Nov_Outline.pdf"},
+        {"name_myanmar": "ပြာရင်းပြပုံ", "name_english": "Visual Arts", "url": "http://www.iqytechnicalcollege.com/09.%20G2_Textbook_VisualArts_15_Nov_Outline.pdf"},
+        {"name_myanmar": "ကုန်စုံသီအိုရီ", "name_english": "Performing Arts", "url": "http://www.iqytechnicalcollege.com/10.%20G2_Textbook_PerformingArts_24_Nov_2017_Outline.pdf"}
+      ],
+      "parental_advice": {
+        "key_focus": "ဖတ်စွာဖတ်နိုင်ဖွင့်တိုက်အောင် လေ့လာပေးပါ။ စာပြောပေးပြီး အကြောင်းပြန်ပြောနိုင်ရန် လိုက်လံစွာ လေ့လာပေးပါ။",
+        "do": [
+          "အလီ (Multiplication Table) ကို အသေးစဉ် ဖတ်နိုင်ရောက်အောင် လေ့လာပေးပါ",
+          "အသေးစားကယ်တင်းပွဲများဖတ်ပြီး ပြန်လည်ပြောပေးပေးပါ",
+          "လက်ကူးခြင်းကို ညီသွက်သော်လည်း အသင့်အရေးကြီးအောင် ရေးပေးပါ"
+        ],
+        "dont": [
+          "အသေးစားစာလုံးများကို ဖြတ်တင်ပြောခြင်းသာလုံး လေ့လာပေးခြင်း မပြုပါနဲ့"
+        ]
+      },
+      "facebook_reference": "https://m.facebook.com/story.php?story_fbid=557369978569418&id=100028892617574"
+    },
+    {
+      "grade": "Year 3 (G3)",
+      "grade_local": "တတိယတန်း (ထိုင်",
+      "level": "primary",
+      "age_range": "7-8",
+      "subjects": [
+        {"name_myanmar": "မြန်မာစာ", "name_english": "Myanmar", "url": "http://www.iqytechnicalcollege.com/01_G3_TB_Myanmar_20181005_Outline.pdf"},
+        {"name_myanmar": "အောက်ပါဘာသာစကား", "name_english": "English", "url": "http://www.iqytechnicalcollege.com/02_G3_TB_20181004_English_Outline.pdf"},
+        {"name_myanmar": "တွက်ချက်", "name_english": "Mathematics", "url": "http://www.iqytechnicalcollege.com/03_G3_TB_Maths_20181011_Outline.pdf"},
+        {"name_myanmar": "သာသန္တာ", "name_english": "Science", "url": "http://www.iqytechnicalcollege.com/04_G3_TB_Science_20180926_Outline.pdf"},
+        {"name_myanmar": "လူမှုရေး", "name_english": "Social Studies", "url": "http://www.iqytechnicalcollege.com/05_G3_TB_SocialStudies_20181010_Outline.pdf"},
+        {"name_myanmar": "ဘဝအရည်အသွေး", "name_english": "Life Skills", "url": "http://www.iqytechnicalcollege.com/06_G3_TB_LifeSkills_20181005_Outline.pdf"},
+        {"name_myanmar": "ကျေးဇူးတင်ရေးနှင့် ဥပမာရေး", "name_english": "Morality & Civics", "url": "http://www.iqytechnicalcollege.com/07_G3_TB_MoralityCivics_20181001_outline.pdf"},
+        {"name_myanmar": "ကွန်ပျူတာ", "name_english": "Physical Education", "url": "http://www.iqytechnicalcollege.com/08_G3_TB_PE_20181012_outline.pdf"},
+        {"name_myanmar": "ပြာရင်းပြပုံ", "name_english": "Visual Arts", "url": "http://www.iqytechnicalcollege.com/09_G3_TB_VisualArts_20181009_Outline.pdf"},
+        {"name_myanmar": "ကုန်စုံသီအိုရီ", "name_english": "Performing Arts", "url": "http://www.iqytechnicalcollege.com/10_G3_TB_PerformingArts_20181008_Outline.pdf"}
+      ],
+      "parental_advice": {
+        "key_focus": "အလီအားလုံးကို G3 အထိ တိုက်ထွက်ရမည်။",
+        "do": [
+          "နောက်ထပ်ကယ်တင်းပွဲများဖတ်ပေးပါ",
+          "ဖတ်ပြီးသော်လည်း ဆက်လပ် ဆန်စူးစွာ သီအိုရီလုပ်ပေးပါ",
+          "အလီ ၂ လများအထိ အရေးကြီးပါသည်။ တိုက်နိုင်ရမည်",
+          "နှစ်ကြိမ်တည်း ဖွင့်စာအုပ်များတွင် လက်ကူးလေ့လာပေးပါ"
+        ],
+        "dont": [
+          "ဖတ်ချင်သလို ဖတ်ခဲ့သော ကယ်တင်းပွဲကို ပြန်လည်မဖတ်ပေးခြင်း"
+        ]
+      },
+      "facebook_reference": "https://m.facebook.com/story.php?story_fbid=557897668516649&id=100028892617574"
+    },
+    {
+      "grade": "Year 4 (G4)",
+      "grade_local": "စတုတ်တန်း (ထိုင်",
+      "level": "primary",
+      "age_range": "8-9",
+      "subjects": [
+        {"name_myanmar": "မြန်မာစာ", "name_english": "Myanmar", "url": "http://www.iqytechnicalcollege.com/Grade%204%20Myanmar.pdf"},
+        {"name_myanmar": "အောက်ပါဘာသာစကား", "name_english": "English", "url": "http://www.iqytechnicalcollege.com/Grade%204%20English.pdf"},
+        {"name_myanmar": "တွက်ချက်", "name_english": "Mathematics", "url": "http://www.iqytechnicalcollege.com/Grade%204%20Math%20.pdf"},
+        {"name_myanmar": "သာသန္တာ", "name_english": "Science", "url": "http://www.iqytechnicalcollege.com/Grade%204%20Science.pdf"},
+        {"name_myanmar": "သမိုင်းနှင့် ဘောလုံးခြစ်", "name_english": "History & Geography", "url": "http://www.iqytechnicalcollege.com/Grade%204%20History%20%26%20Geography.pdf"},
+        {"name_myanmar": "G4 စာအုပ်အားလုံး (ZIP)", "name_english": "All G4 Textbooks (ZIP)", "url": "http://www.iqytechnicalcollege.com/20200519093030_1589857230.zip"}
+      ],
+      "parental_advice": {
+        "key_focus": "ဖတ်စွာဖတ်နိုင်စွာ (Silent Reading) နှင့် ဖတ်ပြီး အကြောင်းကို တိုက်သင်းချက်ပေးနိုင်ရောက်အောင် လေ့လာပေးပါ။",
+        "do": [
+          "အချိန်ကိုယ် သတ်မှတ်နိုင်ရောက်အောင် သင့်ကျေမှတ်ပေးပါ",
+          "အလီအားလုံးကို ဆက်လက်တိုက်ထွက်စေပါ",
+          "ဘဝအရည်အသွေး လေ့လာချက်များကို ဖွင့်လှစ်ပေးပါ"
+        ],
+        "dont": [
+          "ဖတ်လို့မရဘူးသော်လည်း အောက်တွင်းမှ လေ့လာပေးမှာ မပျက်ခဲ့စေပါနဲ့"
+        ]
+      },
+      "facebook_reference": "https://m.facebook.com/story.php?story_fbid=558494431790306&id=100028892617574"
+    },
+    {
+      "grade": "Year 5 (G5)",
+      "grade_local": "တစုတိယတန်း (ထိုင်",
+      "level": "primary",
+      "age_range": "9-10",
+      "note": "Grade 5 textbook links from iqytechnicalcollege.com.",
+      "textbook_links": [
+        {"name_myanmar": "အင်္ဂလိပ်စာ", "name_english": "English", "url": "http://www.iqytechnicalcollege.com/grade5_English.pdf"},
+        {"name_myanmar": "သမိုင်းနှင့် ဘောလုံးခြစ်", "name_english": "History & Geography", "url": "http://www.iqytechnicalcollege.com/grade5_GeoHis.pdf"},
+        {"name_myanmar": "သင်္ချာ", "name_english": "Mathematics", "url": "http://www.iqytechnicalcollege.com/grade5_Math.pdf"},
+        {"name_myanmar": "မြန်မာစာ", "name_english": "Myanmar", "url": "http://www.iqytechnicalcollege.com/grade5_Myanmar.pdf"},
+        {"name_myanmar": "သိပ္ပံ", "name_english": "Science", "url": "http://www.iqytechnicalcollege.com/grade5_Science.pdf"}
+      ],
+      "parental_advice": {
+        "key_focus": "ပထမတန်းခံ (Primary Level) အခြေခံကျေးဇူးတင်ခြင်း၏ အပြုတည်မြောက်ဆုံးနှစ်ဖြစ်သည်။ အလေ့အကျင့်လေ့လာမှုနှင့် ဘဝအရည်အသွေးများကို ဆက်လက်ဖွင့်လှစ်ပေးပါ။"
+      }
+    },
+    {
+      "grade": "Year 6 (G6)",
+      "grade_local": "ချိတ်ဆိုင်းတန်း (မြန်မာ ၅ တန်းကျော်",
+      "level": "middle",
+      "age_range": "10-11",
+      "note": "အလယ်တိုင်းကျေးဇူးတင်ခြင်း စတင်သောနှစ်ဖြစ်သည်။",
+      "subjects": [
+        {"name_myanmar": "မြန်မာစာ", "name_english": "Myanmar", "url": "http://www.iqytechnicalcollege.com/1.G6%20Myanmar%20Final.pdf"},
+        {"name_myanmar": "အောက်ပါဘာသာစကား", "name_english": "English", "url": "http://www.iqytechnicalcollege.com/2.G%206%20English%20Final.pdf"},
+        {"name_myanmar": "တွက်ချက် (၁)", "name_english": "Mathematics 1", "url": "http://www.iqytechnicalcollege.com/3.G-6%20Maths-1%20Final.pdf"},
+        {"name_myanmar": "တွက်ချက် (၂)", "name_english": "Mathematics 2", "url": "http://www.iqytechnicalcollege.com/4.G%206%20Maths%202%20Final.pdf"},
+        {"name_myanmar": "သာသန္တာ", "name_english": "Science", "url": "http://www.iqytechnicalcollege.com/5.G%206%20Science%20Final.pdf"},
+        {"name_myanmar": "ဘောလုံးခြစ်", "name_english": "Geography", "url": "http://www.iqytechnicalcollege.com/6.G%206%20Geo%20Final.pdf"},
+        {"name_myanmar": "သမိုင်း", "name_english": "History", "url": "http://www.iqytechnicalcollege.com/7.G%206%20His%20Final.pdf"},
+        {"name_myanmar": "ကျေးဇူးတင်ရေးနှင့် ဥပမာရေး", "name_english": "Morality & Civics", "url": "http://www.iqytechnicalcollege.com/8.G%206%20Moral%20%26%20Civics%20Final.pdf"},
+        {"name_myanmar": "ဘဝအရည်အသွေး", "name_english": "Life Skills", "url": "http://www.iqytechnicalcollege.com/9.G%206%20Life%20Skills%20Final.pdf"},
+        {"name_myanmar": "ကွန်ပျူတာ", "name_english": "Physical Education", "url": "http://www.iqytechnicalcollege.com/10.G%206%20PE%20Final.pdf"},
+        {"name_myanmar": "ပြာရင်းပြပုံ", "name_english": "Fine Art", "url": "http://www.iqytechnicalcollege.com/11.G%206%20Fine%20Art%20Final.pdf"},
+        {"name_myanmar": "သီအိုရီ", "name_english": "Music", "url": "http://www.iqytechnicalcollege.com/12.G%206%20Music%20Final.pdf"}
+      ],
+      "parental_advice": {
+        "do": [
+          "အလေ့အကျင့်စာဖတ်ခြင်း (Silent Reading) နှင့် ဖတ်ပြီး အနိုင်နိုင် ခြုံရည်ချက်ပေးနိုင်ရောက်အောင် လေ့လာပေးပါ",
+          "အလီအားလုံးကို နောက်ထပ်တိုက်ထွက်စေပါ",
+          "ခန့်မှန်းအချိန် သင့်ကျေမှတ်နိုင်ရောက်အောင် သင့်ကျေမှတ်ပေးပါ",
+          "ကိုယ်ပိုင်ခွင့်ကို လေ့လာအပ်ပါ"
+        ],
+        "dont": [
+          "ဖွဲ့စည်းကိုင်သော နေထိုင်မှုများကို အလွန်လွန်ခဲ့သော် မပြုပါနဲ့"
+        ]
+      },
+      "facebook_reference": "https://m.facebook.com/story.php?story_fbid=559168138389602&id=100028892617574"
+    },
+    {
+      "grade": "Year 7 (G7)",
+      "grade_local": "ဘုတ်တိယတန်း (မြန်မာ ၆ တန်းကျော်",
+      "level": "middle",
+      "age_range": "11-12",
+      "note": "သစ်ပြောင်းစာရင်းသစ် (New Curriculum) ဖြစ်သည်။ ဖတ်စာအရမ်းမြင့်မားသည်။",
+      "subjects": [
+        {"name_myanmar": "အောက်ပါဘာသာစကား", "name_english": "English", "url": "http://www.iqytechnicalcollege.com/G7%20Eng%20text.pdf"},
+        {"name_myanmar": "ဘောလုံးခြစ်", "name_english": "Geography", "url": "http://www.iqytechnicalcollege.com/Grade%207-%20Geo%20Textbook.pdf"},
+        {"name_myanmar": "သမိုင်း", "name_english": "History", "url": "http://www.iqytechnicalcollege.com/Grade%207%20History%20Text.pdf"},
+        {"name_myanmar": "တွက်ချက် (၁)", "name_english": "Mathematics (1)", "url": "http://www.iqytechnicalcollege.com/Grade7-%20Math(1)%20Text.pdf"},
+        {"name_myanmar": "တွက်ချက် (၂)", "name_english": "Mathematics (2)", "url": "http://www.iqytechnicalcollege.com/Grade7-Math(2)%20Text.pdf"},
+        {"name_myanmar": "မြန်မာစာ", "name_english": "Myanmar", "url": "http://www.iqytechnicalcollege.com/Grade7-%20Myanmar%20Textbook.pdf"},
+        {"name_myanmar": "သာသန္တာ", "name_english": "Science", "url": "http://www.iqytechnicalcollege.com/Grade7-%20Science%20Text.pdf"}
+      ],
+      "audio_resources": [
+        "http://www.mediafire.com/file/.../Grade_7_Listening_Exercises_-_mp3_files-20200627T055348Z-001.zip"
+      ],
+      "pcloud_textbook_links": [
+        {"name": "G7 မြန်မာစာကျောင်းသားကိုင်", "url": "https://my.pcloud.com/publink/show..."},
+        {"name": "G7 မြန်မာစာဆရာကိုင်", "url": "https://my.pcloud.com/publink/show..."},
+        {"name": "G7 အင်္ဂလိပ်ကျောင်းသားကိုင်", "url": "https://my.pcloud.com/publink/show..."},
+        {"name": "G7 အင်္ဂလိပ်ဆရာကိုင်", "url": "https://my.pcloud.com/publink/show..."},
+        {"name": "G7 သင်္ချာ(၁) ကျောင်းသားကိုင်", "url": "https://my.pcloud.com/publink/show..."},
+        {"name": "G7 သင်္ချာ(၁) ဆရာကိုင်", "url": "https://my.pcloud.com/publink/show..."},
+        {"name": "G7 သင်္ချာ(၂) ကျောင်းသားကိုင်", "url": "https://my.pcloud.com/publink/show..."},
+        {"name": "G7 သင်္ချာ(၂) ဆရာကိုင်", "url": "https://my.pcloud.com/publink/show..."},
+        {"name": "G7 ပထဝီကျောင်းသားကိုင်", "url": "https://my.pcloud.com/publink/show..."},
+        {"name": "G7 ပထဝီဆရာကိုင်", "url": "https://my.pcloud.com/publink/show..."},
+        {"name": "G7 သမိုင်းကျောင်းသားကိုင်", "url": "https://u.pcloud.link/publink/show..."},
+        {"name": "G7 သမိုင်းဆရာကိုင်", "url": "https://u.pcloud.link/publink/show..."},
+        {"name": "G7 သိပ္ပံကျောင်းသားကိုင်", "url": "https://u.pcloud.link/publink/show..."},
+        {"name": "G7 သိပ္ပံဆရာကိုင်", "url": "https://u.pcloud.link/publink/show..."},
+        {"name": "G7 ကာယကျောင်းသားကိုင်", "url": "https://u.pcloud.link/publink/show..."},
+        {"name": "G7 ကာယဆရာကိုင်", "url": "https://u.pcloud.link/publink/show..."}
+      ],
+      "parental_advice": {
+        "do": [
+          "အောက်ပါဘာသာစကား စာအုပ်များကို အင်္ဂလိပ်-မြန်မာ အင်္ဂလပ်မားဖြင့် ဖတ်ပေးပါ",
+          "သာသန္တာ၊ ဘောလုံးခြစ်၊ သမိုင်းတို့ကို ဖတ်ပြီး ဆက်လပ် ဆန်စူးစွာ ဆောင်ရွက်စွာ သီအိုရီပေးပါ",
+          "ကဗျာများနှင့် စာလုံးအသစ်များကို အသေးစဉ် မှတ်သားပါ"
+        ],
+        "dont": [
+          "အောက်ပါဘာသာစကားဖတ်တင်သော်လည်း အတူသတ်မှတ်မေးပြီး ဖြတ်ပေးခြင်းကို မပြုပါနဲ့ - သားသမီးကိုင်တိုင် အင်္ဂလပ်မားဖြင့် ဖတ်ရန် ဖိအားပေးပါ"
+        ]
+      },
+      "facebook_reference": "https://m.facebook.com/story.php?story_fbid=559898461649903&id=100028892617574"
+    },
+    {
+      "grade": "Year 8 (G8)",
+      "grade_local": "သုတးတိယတန်း (မြန်မာ ၇ တန်းကျော်",
+      "level": "middle",
+      "age_range": "12-13",
+      "note": "ဘာသာစကားအရေးအသွေးမြှုပ်နှံပြီး အရေးကြီးပြည့်ဝ (Old Curriculum - ၈ တန်း) ဖြစ်သည်။",
+      "subjects": [
+        {"name_myanmar": "အောက်ပါဘာသာစကား", "name_english": "English", "url": "http://www.iqytechnicalcollege.com/Grade%208%20English.pdf"},
+        {"name_myanmar": "ဘောလုံးခြစ်", "name_english": "Geography", "url": "http://www.iqytechnicalcollege.com/Grade%208%20Geography.pdf"},
+        {"name_myanmar": "သမိုင်း", "name_english": "History", "url": "http://www.iqytechnicalcollege.com/Grade%208%20History.pdf"},
+        {"name_myanmar": "တွက်ချက် (၁)", "name_english": "Mathematics 1", "url": "http://www.iqytechnicalcollege.com/Grade%208%20Math%201.pdf"},
+        {"name_myanmar": "တွက်ချက် (၂)", "name_english": "Mathematics 2", "url": "http://www.iqytechnicalcollege.com/Grade%208%20Math%202.pdf"},
+        {"name_myanmar": "မြန်မာစာ (၁)", "name_english": "Myanmar 1", "url": "http://www.iqytechnicalcollege.com/Grade%208%20Myanmar%201.pdf"},
+        {"name_myanmar": "မြန်မာစာ (၂)", "name_english": "Myanmar 2", "url": "http://www.iqytechnicalcollege.com/Grade%208%20Myanmar%202.pdf"},
+        {"name_myanmar": "မြန်မာစာ (၃)", "name_english": "Myanmar 3", "url": "http://www.iqytechnicalcollege.com/Grade%208%20Myanmar%203.pdf"},
+        {"name_myanmar": "သာသန္တာ", "name_english": "Science", "url": "http://www.iqytechnicalcollege.com/Grade%208%20Science.pdf"}
+      ],
+      "parental_advice": {
+        "key_focus": "အရေးကြီးပြည့်ဝသုံးတန်းအဖြစ် ပြောင်းလဲနေပြီးသော်လည်း အလယ်တိုင်းကျေးဇူးတင်ခြင်း၏ အပြည့်ဝသုံးနှစ်ဖြစ်သည်။",
+        "do": [
+          "မြန်မာစာ စာစီစာကုံး ရေးဆွဲပြီး လေ့လာပေးပါ",
+          "အောက်ပါဘာသာစကား - စာလုံးအသစ်များ၊ စာလုံးပုံစံများ၊ လက်ရှိစကားပုံများကို အသေးစဉ် ဖတ်ပေးပါ",
+          "သာသန္တာ၊ ဘောလုံးခြစ်၊ သမိုင်း - မှတ်သားပေးပြီး Question Bank ကို ဖြတ်ပေးပါ"
+        ],
+        "dont": [
+          "အောက်ပါဘာသာစကားကို မြန်မာပြောလို့ ပြောင်းပေးခြင်းကို မပြုပါနဲ့ - သားသမီးကိုင်တိုင် အင်္ဂလပ်မားဖြင့် ဖတ်တင်ရန် လေ့လာပေးပါ"
+        ]
+      },
+      "facebook_reference": "https://www.facebook.com/100028892617574/posts/560530091586740/"
+    },
+    {
+      "grade": "Year 9 (G9)",
+      "grade_local": "မြောက်တိယတန်း (မြန်မာ ၈ တန်းကျော်",
+      "level": "high",
+      "age_range": "13-14",
+      "note": "သစ်ပြောင်းစာရင်းသစ် (New Curriculum - Grade 9) ဖြစ်သည်။",
+      "subjects": [
+        {"name_myanmar": "ဇီးဝီးနီအိတ်", "name_english": "Biology", "url": "http://www.iqytechnicalcollege.com/Grade%209%20Biology.pdf"},
+        {"name_myanmar": "ကီးမီကစ္စာ", "name_english": "Chemistry", "url": "http://www.iqytechnicalcollege.com/Grade%209%20Chemistry.pdf"},
+        {"name_myanmar": "ရောင်းတော်ရေး", "name_english": "Economics", "url": "http://www.iqytechnicalcollege.com/Grade%209%20Eco.pdf"},
+        {"name_myanmar": "အောက်ပါဘာသာစကား", "name_english": "English", "url": "http://www.iqytechnicalcollege.com/Grade%209%20English%20text.pdf"},
+        {"name_myanmar": "တွက်ချက်", "name_english": "Mathematics", "url": "http://www.iqytechnicalcollege.com/Grade%209%20Mathematics.pdf"},
+        {"name_myanmar": "မြန်မာစာ (၁)", "name_english": "Myanmar 1", "url": "http://www.iqytechnicalcollege.com/Grade%209%20Myanmar%201.pdf"},
+        {"name_myanmar": "မြန်မာစာ (၂)", "name_english": "Myanmar 2", "url": "http://www.iqytechnicalcollege.com/Grade-9%20Myanmar%202.pdf"},
+        {"name_myanmar": "မြန်မာစာ (၃)", "name_english": "Myanmar 3", "url": "http://www.iqytechnicalcollege.com/Grade-9%20Myanmar%203.pdf"},
+        {"name_myanmar": "ရုပ်တိုင်းသာသန္တာ", "name_english": "Physics", "url": "http://www.iqytechnicalcollege.com/Grade%209%20Physics.pdf"}
+      ],
+      "parental_advice": {
+        "key_focus": "Question Bank (အဖွဲ့ဝင်မေးခွန်းအကျဉ်းများ) ကို အလွန်အရေးပေးလေ့လာပါ။ မှတ်သားချက်များနှင့် အခြေခံသစ်တမ်းများကို အသေးစဉ် ဖတ်ပါ။",
+        "do": [
+          "Question Bank ကို နေ့စဉ် အနည်းဆုံး ၁ ခု ဖြတ်ပေးပါ",
+          "မြန်မာစာ - စာစီစာကုံးနှင့် ကဗျာများကို အလေ့အကျင့်ဖတ်ပေးပါ",
+          "အောက်ပါဘာသာစကား - စာလုံးအသစ်များကို မှတ်သားပေးပါ။ အင်္ဂလပ်မားဖြင့် ဖတ်တင်ပါ"
+        ],
+        "dont": [
+          "Question Bank ကို ဖတ်ပေးခွင့် မပေးဘူးလို့ ထားခြင်း မပြုပါနဲ့"
+        ]
+      },
+      "facebook_reference": "https://m.facebook.com/story.php?story_fbid=561124131527336&id=100028892617574"
+    },
+    {
+      "grade": "Year 10 (G10)",
+      "grade_local": "ညစဉ်တိယတန်း (မြန်မာ ၉ တန်းကျော် / တက္ကသိုလ်ဝင်တန်း",
+      "level": "high",
+      "age_range": "14-15",
+      "note": "သစ်ပြောင်းစာရင်းသစ် (New Curriculum - Grade 10 / Matriculation) ဖြစ်သည်။ သို့သော် အချိန်ပြဿနာအရာရင်းချဲ့ခြင်း (အတွဲရွေးချယ်ခြင်း) လိုအပ်သည်။",
+      "matriculation_tracks": [
+        {
+          "track_number": 1,
+          "track_name_myanmar": "သာသန္တာအတွဲ (Science)",
+          "track_name_english": "Track 1 - Science",
+          "career_paths": "ဆေးရှင်၊ တော်သို့ (Engineering)",
+          "main_subjects": ["ကီးမီကစ္စာ", "ရုပ်တိုင်းသာသန္တာ", "ဇီးဝီးနီအိတ်", "တွက်ချက်", "အောက်ပါဘာသာစကား", "မြန်မာစာ"],
+          "textbook_links": {
+            "biology": "http://www.iqytechnicalcollege.com/Grade%2010%20Bio.pdf",
+            "chemistry": "http://www.iqytechnicalcollege.com/Grade%2010%20Chem.pdf",
+            "economics": "http://www.iqytechnicalcollege.com/Grade%2010%20Eco.pdf",
+            "english": "http://www.iqytechnicalcollege.com/Grade%2010%20English.pdf",
+            "mathematics": "http://www.iqytechnicalcollege.com/Grade%2010%20Mathematics.pdf",
+            "myanmar_1": "http://www.iqytechnicalcollege.com/Grade%2010%20Myanmar%201.pdf",
+            "myanmar_2": "http://www.iqytechnicalcollege.com/Grade%2010%20Myanmar%202.pdf",
+            "myanmar_3": "http://www.iqytechnicalcollege.com/Grade%2010%20Myanmar%203.pdf",
+            "myanmar_4": "http://www.iqytechnicalcollege.com/Grade%2010%20Myanmar%204.pdf"
+          }
+        },
+        {
+          "track_number": 2,
+          "track_name_myanmar": "ဘောလုံးရေး/သာသန္တာအတွဲ (Economics/Science)",
+          "track_name_english": "Track 2 - Economics/Science",
+          "career_paths": "ဘောလုံးရေး၊ နည်းပညာရေး",
+          "main_subjects": ["ကီးမီကစ္စာ", "ရုပ်တိုင်းသာသန္တာ", "ဘောလုံးရေး", "တွက်ချက်", "အောက်ပါဘာသာစကား", "မြန်မာစာ"]
+        },
+        {
+          "track_number": 3,
+          "track_name_myanmar": "သုတိယ/ဘောလုံးရေးအတွဲ (Arts/Economics)",
+          "track_name_english": "Track 3 - Arts/Economics",
+          "career_paths": "ဥပမာရေး၊ ရေးရာရေး၊ စာရေးကြီး",
+          "main_subjects": ["ဘောလုံးခြစ်", "သမိုင်း", "ဘောလုံးရေး", "တွက်ချက်", "အောက်ပါဘာသာစကား", "မြန်မာစာ"]
+        },
+        {
+          "track_number": 4,
+          "track_name_myanmar": "မြန်မာစာ/လူမှုအတွဲ (Myanmar/Arts)",
+          "track_name_english": "Track 4 - Myanmar/Arts",
+          "career_paths": "မြန်မာစာရေးကြီး၊ စာသားရှင်၊ သူရဲပညာရေး (Psychology)",
+          "main_subjects": ["မြန်မာစာ (အရေးကြီး)", "ဘောလုံးခြစ်နှင့်သမိုင်း (ပေါင်းစပ်)", "ဘောလုံးရေး", "တွက်ချက်", "အောက်ပါဘာသာစကား"]
+        }
+      ],
+      "parental_advice": {
+        "key_focus": "Myanmar Examinations Department ၏ ယမ်းမေးခွန်းအကျဉ်းများ (Past Exam Papers / Question Bank) ကို အရေးပေးဖြတ်ပေးပါ။",
+        "do": [
+          "သားသမီး၏ အလွန်ခက်ခဲသော အိမ်တစ်ခုကို ရွေးချယ်ပေးပါ - ယုံကြည်မှုရှိမှု အရေးကြီးပါသည်",
+          "Question Bank ကို နေ့စဉ် အနည်းဆုံး ၂ ခု ဖြတ်ပေးပါ",
+          "အခြေခံသစ်တမ်းများကို လေ့လာချက်များနှင့် အတူ ဖြတ်ပေးပါ"
+        ],
+        "dont": [
+          "သားသမီး၏ အချိန်အားလုံးကို ဖြတ်စာနှင့်သာ ဖြတ်အောင် မတိုက်သွားပါနဲ့"
+        ]
+      },
+      "facebook_reference": "https://m.facebook.com/story.php?story_fbid=561693724803710&id=100028892617574"
+    },
+    {
+      "grade": "Year 11 (G11) / Year 12",
+      "grade_local": "နမူနာတန်း (မြန်မာ ၁၀ တန်းကျော် / တက္ကသိုလ်ဝင်တန်း ခံစစ်)",
+      "level": "high",
+      "age_range": "15-17",
+      "note": "ဘာသာစကားအရေးအသွေးမြှုပ်နှံပြီး အရေးကြီးပြည့်ဝ (Old Curriculum - ၁၀ တန်း) ဖြစ်သည်။ တက္ကသိုလ်ဝင်တန်းအတွက် အချိန်ပြဿနာအရာရင်း အလွန်အရေးကြီးပါသည်။",
+      "exam_preparation": {
+        "exam_name_myanmar": "တက္ကသိုလ်ဝင်တန်း ခံစစ်",
+        "exam_name_english": "University Entrance Examination",
+        "key_resources": {
+          "reference_books": "http://www.highlightcomputer.com/y712lessons.htm#A"
+        },
+        "myanmar_subject_focus": [
+          "ပြုပြင်ရေးကိုင်သော ကဗျာများအားလုံးကို အသေးစဉ် မှတ်သားပါ",
+          "စကားပြေအုပ် (Prose) အားလုံးကို ဖတ်ပြီး အဓိကအရာရာများကို ရှင်းပြရန်",
+          "သဒ္ဒါ (Grammar) ဆရာများကို လေ့လာပါ",
+          "အုပ်လိုက်ထားသော ကဗျာနှင့် စကားပြေများကို နေ့စဉ် ဖြတ်ပေးပါ"
+        ],
+        "english_subject_focus": [
+          "ပြုပြင်ရေးကိုင်သော ကဗျာများအားလုံးကို မှတ်သားပါ",
+          "စာလုံးအသစ်များနှင့် ဆန်ကူးသုံးစွဲမှုများကို ဖတ်ပေးပါ",
+          "အင်္ဂလပ်မားဖြင့် အတူဖြတ်နိုင်ရောက်အောင် လေ့လာပေးပါ"
+        ]
+      },
+      "parental_advice": {
+        "key_focus": "Question Bank ကိုသာ အားလုံးလေ့လာပါ။ ယမ်းမေးခွန်းအကျဉ်းများကို နေ့စဉ် ဖြတ်ပေးပါ။ နိဂုံးကပ်စာအုပ်များ (Reference Books) ကို ဖြည့်စွက်ပေးပါ။",
+        "do": [
+          "Question Bank ကို နေ့စဉ် အနည်းဆုံး ၃-၅ ခု ဖြတ်ပေးပါ",
+          "နိဂုံးကပ်စာအုပ်များကို ဖောက်ဖြေရန် အကြံပြုပါ",
+          "သားသမီး၏ စိတ်ဖိစီးမှုကို အခြေခံပေးပါ - အောင်မြင်မှုထက် ကိုယ်ပိုင်စိတ်ဖိစီးမှုကို ခပ်သားစွာ မှတ်ပါ",
+          "အိမ်နေထိုင်မှုများကို လျှော့ချပေးပြီး ဖြတ်စာသာ အချိန်ပေးပါ"
+        ],
+        "dont": [
+          "ယုံကြည်မှုမရှိဘူးလို့ ခွဲခြမ်းပေးခြင်း မပြုပါနဲ့",
+          "အခြားနေaldo သားသမီးများနှင့် ယုံကြည်မှုမပါဘူးလို့ နှိုင်းယူပေးခြင်းကို မပြုပါနဲ့"
+        ]
+      },
+      "resource_links": {
+        "reference_books": "http://www.highlightcomputer.com/y712lessons.htm#A"
+      }
+    }
+  ],
+  "parenting_guidelines": {
+    "general_principles": {
+      "title_myanmar": "သားသမီးကျေးဇူးတင်ရေး အခြေခံမူများ",
+      "title_english": "Core Parenting Principles",
+      "principles": [
+        {
+          "principle": "နေ့စဉ်အတွက် ကယ်တင်းပွဲများဖတ်ပေးပါ",
+          "explanation": "ဖတ်စွာဖတ်နိုင်မှုနှင့် စာတွေ့မှုကို ရှုပ်ထွေးလာစေရန် နေ့စဉ်ဆုံး အချိန်တိုင်းကို ကယ်တင်းပွဲဖတ်ခြင်းနှင့် ဖြတ်ပေးခြင်းကို လေ့လာပေးသင့်သည်။ ဖတ်သွားလျှင် အကြောင်းကို ဆန်စူးစွာ ပြောပေးပေးခြင်းသာ မဟုတ်ဘဲ၊ သားသမီးအား အကြောင်းပြန်လည်ပြောပေးခွင့်ပေးပါ။"
+        },
+        {
+          "principle": "ဖတ်ဆက်မှုနှင့် အကြောင်းကို ပြန်လည်ပြောပေးနိုင်ရောက်အောင် လေ့လာပေးပါ",
+          "explanation": "ကယ်တင်းပွဲများကို ဖတ်ပြီး သားသမီးအား အကြောင်းကို ငြိမ်သားစွာ ပြောပေးနိုင်မည်မျှထိ လေ့လာပေးပါ။ ဤသည် ဖတ်စွာဖတ်နိုင်မှုနှင့် ဆန်ကူးချက်ပြုစွာကို ဖွင့်လှစ်ပေးမည်ဖြစ်သည်။"
+        },
+        {
+          "principle": "လက်ကူးခြင်းကို ညီသွက်ပေးပါ",
+          "explanation": "လက်ကူးခြင်းသည် သားသမီး၏ စိတ်သည်းနှင့် လက်ဝဲလွယ်ကူအားနည်းကို ဖွင့်လှစ်သလို မြန်မာစာကို ရှင်းလင်းစွာ ရေးသားနိုင်ရောက်အောင်လည်း အထောက်အပ်သည်။"
+        },
+        {
+          "principle": "အလီ (Multiplication Tables) ကို G3 အထိ တိုက်ထွက်စေပါ",
+          "explanation": "အလီသည် တွက်ချက်အတွက် အခြေခံအရာရင်းဖြစ်ပြီး နောက်ထပ်တွက်ချက်များကို လေ့လာရန် အရေးကြီးသည်။ G3 တွင် အလီ ၁ မှ ၁၂ အထိ တိုက်ထွက်နေရမည်ဖြစ်သည်။"
+        },
+        {
+          "principle": "G9/G10/G11 တွင် Question Bank (ယမ်းမေးခွန်းအကျဉ်းများ) ကို အသုံးပြုပါ",
+          "explanation": "အရေးကြီးပြည့်ဝနှစ်များတွင် Myanmar Examinations Department ၏ ယမ်းမေးခွန်းအကျဉ်းများကို အသုံးပြုပေးပြီး ခံစစ်အတွက် အချိန်ပြဿနာပေးပါ။"
+        },
+        {
+          "principle": "ဘဝအရည်အသွေးများနှင့် အိမ်ရှင်နယ်လုပ်ငန်းများကို သင့်ကျေမှတ်ပေးပါ",
+          "explanation": "ကျေးဇူးတင်ရေးနှင့်အတူ ဘဝအရည်အသွေးလေ့လာချက်များကိုလည်း အရေးကြီးစွာ သင့်ကျေမှတ်ပေးသင့်သည်။ အိမ်ရှင်နယ် လုပ်ငန်းများကို လေ့လာပေးခြင်းဖြင့် ပိုင်ဆိုင်မှုတာဝန်းမှုနှင့် တိုက်ရိုက်လုပ်ကိုင်မှုကို ဖွင့်လှစ်နိုင်သည်။"
+        },
+        {
+          "principle": "သားသမီးအား ရွေးချယ်ခွင့်ပေးပြီး ဆုံးဖြတ်နိုင်စွာ ခန့်မှန်းနိုင်ရောက်အောင် လေ့လာပေးပါ",
+          "explanation": "သားသမီးအား ကိုယ်ပိုင်ဆုံးဖြတ်ခွင့်ရရှိရန် နေထိုင်မှုများတွင် ရွေးချယ်ပေးခွင့်ပေးပါ။ ဤသည် ဆုံးဖြတ်ခွင့်ရရှိမှုနှင့် တိုက်တည်းဖွယ်ရားဝင်မှုကို ဖွင့်လှစ်သည်။"
+        },
+        {
+          "principle": "ပျော်ရွှင်စွာ အလုပ်လုပ်နိုင်ကြောင်း တိုက်ဆိုးကျွေးမေးပါ",
+          "explanation": "သားသမီး အရမ်းသင့်မြင်နေသောအခါတွင် အောင်မြင်မှုများကို ချီမြှင့်တင်ပေးပါ။ ငယ်လူးတို့၏ ကိုယ်ပိုင်ခံချေရှိမှုကို အလွယ်တကူ တိုက်ဆိုးပေးပါ။"
+        },
+        {
+          "principle": "သားသမီး၏ စိတ်ခွန်အဓိပ္ပာယ်မှုကို ငြိမ်သားစွာ နားလည်ပါ",
+          "explanation": "ကျေးဇူးတင်ရေးသာမက သားသမီး၏ စိတ်ခွန်အဓိပ္ပာယ်ဖွင့်ဆုံးမှုနှင့် ချီးကျင်စိတ်ဖိစီးမှုကို ကျေးဇူးပေးပါ။"
+        }
+      ],
+      "common_mistakes": [
+        {
+          "mistake": "KG/G1 သားသမီးအား စာလုံးများကို အလိုလို ကူးရမ်းခြင်း (Copy writing)",
+          "correction": "KG/G1 တွင် လက်ရှိနေထိုင်မှုအရေးကြီးသော လက်ဝဲလွယ်ကူအားနည်းများ (ရုပ်သွင်းခြင်း၊ ပစ္စည်းစီမံခြင်း၊ Origami) ကို အားရေးပေးပါ။ ကိုယ်ပိုင်ဖြာအဆင့်မှာ စာလုံးကူးရမ်းခြင်းသည် သားသမီး၏ ကိုယ်ပိုင်ဖွင့်ဆုံးမှုကို ပျက်စီးစေနိုင်သည်။"
+        },
+        {
+          "mistake": "မီးနင်းစာအုပ်များ (Exercise Books) ကို အောက်ပါဘာသာစကားလေ့လာရန် အသုံးပြုခြင်း",
+          "correction": "အောက်ပါဘာသာစကားကို ဖတ်စွာဖတ်နိုင်မှု (Reading Comprehension) ကို အားရေးပေးပါ။ မီးနင်းစာအုပ်များဖြင့် စာလုံးဖြတ်ခြင်းသာ လေ့လာပေးခြင်းသည် အောက်ပါဘာသာစကားဖတ်စွာဖတ်နိုင်မှုကို မဖွင့်လှစ်ဘဲ စာလုံးသာ ဖြတ်တတ်နေသွားနိုင်သည်။"
+        },
+        {
+          "mistake": "သားသမီးအား အောက်ပါဘာသာစကားကို မြန်မာလို ပြောင်းပေးခြင်း",
+          "correction": "သားသမီးကိုင်တိုင် အင်္ဂလပ်မားဖြင့် ဖတ်နိုင်ရောက်အောင် လေ့လာပေးပါ။ အင်္ဂလပ်မား (Dictionary) သုံးနိုင်ရောက်အောင် သင့်ကျေမှတ်ပေးပါ။"
+        },
+        {
+          "mistake": "သားသမီး ပြတ်သွားသောအခါ ခွဲခြမ်းစိတ်ဖြာပေးခြင်း",
+          "correction": "ငယ်လူးတို့ အမှားလုပ်သောအခါတွင် ပြတ်သွားသော မကြာသေးမီ ခွဲခြမ်းပေးမဲ့ဘူးလို့ ဝမ်းမြောက်ပါ။ ခွဲခြမ်းမှုသည် သားသမီး၏ စိတ်ခွန်အဓိပ္ပာယ်ဖွင့်ဆုံးမှုနှင့် ကျေးဇူးတင်ရေး ဖောက်ထုတ်မှုကို ဆုံးကပ်စေနိုင်သည်။"
+        }
+      ]
+    },
+    "age_specific_advice": {
+      "kg_to_g3": {
+        "age_range": "KG - Grade 3",
+        "focus_myanmar": "ဖတ်စွာဖတ်နိုင်မှုနှင့် အခြေခံ တွက်ချက် လေ့လာခြင်း",
+        "focus_english": "Reading fluency and basic numeracy",
+        "key_activities": [
+          "ကယ်တင်းပွဲဖတ်ပေးပါ",
+          "ရုပ်သွင်းခြင်း၊ အရောင်ဖြည့်ခြင်း၊ Origami",
+          "အလီ မှတ်သားပေးပါ",
+          "လက်ကူးခြင်း လေ့လာပေးပါ",
+          "အိမ်ရှင်နယ်လုပ်ငန်း လေ့လာပေးပါ"
+        ]
+      },
+      "g4_to_g6": {
+        "age_range": "Grade 4 - Grade 6",
+        "focus_myanmar": "ဖတ်စွာဖတ်နိုင်မှု (Silent Reading) နှင့် အကြောင်းခြုံရည်ချက်ပေးနိုင်မှု",
+        "focus_english": "Silent reading comprehension and summarization skills",
+        "key_activities": [
+          "ဖတ်ပြီး အကြောင်းပြန်လည်ပြောပေးပေးပါ",
+          "အချိန်သတ်မှတ်နိုင်ရောက်အောင် လေ့လာပေးပါ",
+          "အလီ အားလုံး တိုက်ထွက်စေပါ",
+          "ဘဝအရည်အသွေး လေ့လာချက်များ ဆက်လက်ပါ",
+          "ခန့်မှန်းအချိန် သင့်ကျေမှတ်ပေးပါ"
+        ]
+      },
+      "g7_to_g9": {
+        "age_range": "Grade 7 - Grade 9",
+        "focus_myanmar": "ပိုမိုရှည်လျားသော ဖတ်စာအရမ်းနှင့် စာစီစာကုံး ရေးဆွဲခြင်း",
+        "focus_english": "Heavier reading loads and essay writing practice",
+        "key_activities": [
+          "စာစီစာကုံး ရေးဆွဲပေးပါ (အောက်ပါဘာသာစကားနှင့် မြန်မာစာ)",
+          "Question Bank ဖြတ်ပေးပါ",
+          "အင်္ဂလပ်မားသုံးပေးပါ",
+          "ကဗျာများနှင့် စာလုံးအသစ်များ မှတ်သားပေးပါ",
+          "ဆန်စူးစွာ ဆောင်ရွက်ပေးပါ"
+        ]
+      },
+      "g10_to_g11": {
+        "age_range": "Grade 10 - Grade 11",
+        "focus_myanmar": "တက္ကသိုလ်ဝင်တန်း ခံစစ် အချိန်ပြဿနာ",
+        "focus_english": "University entrance examination preparation",
+        "key_activities": [
+          "Question Bank နေ့စဉ် ဖြတ်ပေးပါ",
+          "နိဂုံးကပ်စာအုပ်များ ဖောက်ဖြေပေးပါ",
+          "ကဗျာနှင့် စကားပြေများ မှတ်သားပေးပါ",
+          "ခံစစ်ဆန်တိုက် ခံစစ်လေ့လာခြင်း",
+          "သားသမီး၏ စိတ်ဖိစီးမှု ကျေးဇူးပေးပါ"
+        ]
+      }
+    }
+  },
+  "curriculum_transition_notes": {
+    "title_myanmar": "သစ်ပြောင်းစာရင်းသစ်နှင့် အရေးကြီးပြည့်ဝစာရင်း ကွဲခြားချက်များ",
+    "title_english": "Differences between New Curriculum and Old Curriculum",
+    "grades_with_new_curriculum": ["Grade 7", "Grade 9", "Grade 10"],
+    "grades_with_old_curriculum": ["Grade 8 (8th Standard)", "Grade 11 (10th Standard)"],
+    "note": "မြန်မာကျေးဇူးတင်ရေးမှာ သစ်ပြောင်းစာရင်းသစ်နှင့် အရေးကြီးပြည့်ဝစာရင်း တို့ ပေါင်းစပ်ပေရှိသည်။ G7, G9, G10 တို့သည် သစ်ပြောင်းစာရင်းသစ်ဖြစ်ပြီး G8, G11 တို့သည် အရေးကြီးပြည့်ဝစာရင်းဖြစ်သည်။ ထို့ကြောင့် တိုင်းရင်းနှစ်နှစ်အတွက် စာအုပ်များကို မှန်ကန်စွာ ရွေးချယ်ပေးရန် လိုအပ်သည်။"
+  },
+  "subject_mapping": {
+    "myanmar": {
+      "name_myanmar": "မြန်မာစာ",
+      "name_english": "Myanmar Language",
+      "description": "မြန်မာဘာသာစကားကို ဖတ်စွာဖတ်နိုင်မှု၊ ရေးဆွဲခြင်းနှင့် စကားပြောခြင်းအတွက် အားလုံးသော်လည်း နှစ်တိုင်းတွင် သင့်ကျေမှတ်ရသည်။ G8 မှစ၍ စာအုပ် (၃) အုပ် ခွဲခြားထားသည်။",
+      "key_skills": ["ဖတ်စွာဖတ်နိုင်မှု", "စာစီစာကုံး ရေးဆွဲခြင်း", "ကဗျာ မှတ်သားခြင်း", "စကားပြေ ပြောင်းပေးခြင်း", "သဒ္ဒါ လေ့လာခြင်း"]
+    },
+    "english": {
+      "name_myanmar": "အောက်ပါဘာသာစကား",
+      "name_english": "English Language",
+      "description": "Reading Comprehension ကို အားရေးပေးပြီး အင်္ဂလပ်မားသုံးပေးပါ။ မီးနင်းစာအုပ်များဖြင့် လေ့လာခြင်းထက် Reading Comprehension ကို အားရေးပေးပါ။",
+      "key_skills": ["ဖတ်စွာဖတ်နိုင်မှု", "စာလုံးအသစ်များ မှတ်သားခြင်း", "အင်္ဂလပ်မားသုံးခြင်း", "ဆန်ကူးသုံးစွဲခြင်း"]
+    },
+    "mathematics": {
+      "name_myanmar": "တွက်ချက်",
+      "name_english": "Mathematics",
+      "description": "အလီကို G3 တွင် တိုက်ထွက်ပေးပါ။ G6 မှစ၍ စာအုပ် ၂ အုပ် ခွဲခြားထားသည်။",
+      "key_skills": ["အလီ တိုက်ထွက်ခြင်း", "အခြေခံ အဲနိုင်း (Algebra)", "ဘောလုံးခြစ် (Geometry)", "စည်းမျဉ်း (Statistics)"]
+    },
+    "science": {
+      "name_myanmar": "သာသန္တာ",
+      "name_english": "Science",
+      "description": "G9 မှစ၍ ဇီးဝီးနီအိတ်၊ ကီးမီကစ္စာ၊ ရုပ်တိုင်းသာသန္တာ အဖြစ် ခွဲခြားသွားသည်။",
+      "key_skills": ["သစ်တမ်းများ မှတ်သားခြင်း", "လေ့လာချက်များ ဆောင်ရွက်ခြင်း", "Question Bank ဖြတ်ခြင်း"]
+    },
+    "social_studies": {
+      "name_myanmar": "လူမှုရေး အရာရင်းများ",
+      "name_english": "Social Studies (History, Geography, Economics)",
+      "description": "G4 တွင် သမိုင်းနှင့် ဘောလုံးခြစ် ပေါင်းစပ်ထားပြီး G6 မှစ၍ ခွဲခြားသွားသည်။ G9 မှစ၍ ဘောလုံးရေးကိုလည်း သင့်ကျေမှတ်ရသည်။",
+      "key_skills": ["မှတ်သားချက် မှတ်သားခြင်း", "ပေါင်းစပ်ဆရာများ ဖြတ်ခြင်း", "Question Bank ဖြတ်ခြင်း"]
+    }
+  },
+  "exam_system": {
+    "university_entrance_exam": {
+      "name_myanmar": "တက္ကသိုလ်ဝင်တန်း ခံစစ်",
+      "name_english": "University Entrance Examination",
+      "description": "မြန်မာနိုင်ငံတွင် အရေးကြီးဆုံး ခံစစ်ဖြစ်သည်။ ဤခံစစ်ရပ်တည်ရမှတ်မှုအပေါ် မိုသားရေးသားဝင်ရောက်မှုကို ဆုံးဖြတ်သည်။",
+      "preparation_strategy": [
+        "Question Bank (ယမ်းမေးခွန်းအကျဉ်းများ) ကို နေ့စဉ် အနည်းဆုံး ၃-၅ ခု ဖြတ်ပေးပါ",
+        "နိဂုံးကပ်စာအုပ်များ (Reference Books) ကို ဖောက်ဖြေပေးပါ",
+        "မြန်မာစာ - ပြုပြင်ရေးကိုင်သော ကဗျာများနှင့် စကားပြေအုပ်များကို အသေးစဉ် မှတ်သားပါ",
+        "အောက်ပါဘာသာစကား - ပြုပြင်ရေးကိုင်သော ကဗျာများနှင့် စာလုံးအသစ်များကို ဖတ်ပေးပါ",
+        "သာသန္တာ/ဘောလုံးခြစ်/သမိုင်း - သစ်တမ်းများနှင့် ကိုယ်စားပိုင်ဝေါဟာရများကို မှတ်သားပါ"
+      ]
+    }
+  },
+  "ai_training_instructions": {
+    "purpose": "ဤ dataset သည် Nyanlin AI ကို မြန်မာနိုင်ငံ ကျေးဇူးတင်ရေးစနစ်ကို နားလည်နိုင်ရောက်အောင် လေ့လာပေးရန် ဖြစ်သည်။",
+    "key_capabilities_needed": [
+      "KG မှ Grade 11 အထိ မြန်မာကျေးဇူးတင်ရေးစနစ်ကို အပြည့်ရပ်နားလည်ခြင်း",
+      "နေထိုင်မှုအတွက် သားသမီးကျေးဇူးတင်ရေး မှတ်ချက်များကို မြင်တွေးခြင်း",
+      "စာအုပ်လင်များနှင့် အရည်အသွေးသစ်မများကို ဖော်ပြခြင်း",
+      "ခံစစ်အတွက် လေ့လာချက်နှင့် အကြံပြုမှုများပေးခြင်း",
+      "မြန်မာဘာသာစကားဖြင့် သားသမီးကျေးဇူးတင်ရေး မေးခွန်းများကို ဖြေပြောနိုင်ခြင်း"
+    ],
+    "response_guidelines": [
+      "မြန်မာဘာသာစကားဖြင့် ဖြေပြောပါ",
+      "အသေးစားနှင့် အကျိုးရှိသော မှတ်ချက်များကို ပေးပါ",
+      "နေကယ့်ကျေးဇူးတင်ရေးနှစ်နှင့် အညီ အကြံပြုမှုများကို ပေးပါ",
+      "စာအုပ်လင်များကို ဖော်ပြပါ - လင်များပျက်နေပါကလည်း အခြေခံအုံတွင်းကို နားလည်နိုင်ပါသည်",
+      "သားသမီးကျေးဇူးတင်ရေး နေ့စဉ်လေ့လာချက်များကို အကြံပြုပါ",
+      "ခံစစ်လေ့လာခြင်းအတွက် Question Bank ကို အသုံးပြုရန် အကြံပြုပါ"
+    ]
+  }
+}
