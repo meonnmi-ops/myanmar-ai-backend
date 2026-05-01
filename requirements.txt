@@ -2,5 +2,3 @@ flask==3.0.0
 flask-cors==4.0.0
 gunicorn==21.2.0
 requests==2.31.0
-pyidaungsu>=0.1.0
-mytokenize>=0.1.0
