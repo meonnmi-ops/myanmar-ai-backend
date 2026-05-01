@@ -2,6 +2,7 @@ services:
   - type: web
     name: myanmar-ai-backend
     runtime: python
+    rootDir: .
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn curriculum_grammar_server:app
     plan: free
