@@ -531,7 +531,7 @@ def api_termux_exec():
         }), 403
 
     # Forward to Puter terminal
-    puter_url = os.environ.get("PUTER_EXEC_URL", "https://myanos-terminal.puter.site/exec")
+    puter_url = os.environ.get("PUTER_EXEC_URL", "https://helpful-cat-7216.puter.site/exec")
     try:
         resp = http_requests.post(puter_url, json={"command": command}, timeout=30)
         return jsonify(resp.json())
