@@ -507,12 +507,12 @@ def api_termux_exec():
 
     # Allowed safe commands whitelist
     ALLOWED_PREFIXES = [
-        "ls", "pwd", "whoami", "date", "echo", "cat ", "head ",
-        "tail ", "wc ", "grep ", "find ", "python ", "python3 ",
-        "pip ", "npm ", "node ", "git ", "curl ", "wget ",
-        "pkg ", "apt ", "mkdir ", "touch ", "cp ", "mv ",
-        "chmod ", "uname ", "df ", "free ", "ps ", "env ",
-        "which ", "man ", "history", "clear", "help",
+        "ls", "pwd", "whoami", "date", "echo", "cat", "head",
+        "tail", "wc", "grep", "find", "python", "python3",
+        "pip", "npm", "node", "git", "curl", "wget",
+        "pkg", "apt", "mkdir", "touch", "cp", "mv",
+        "chmod", "uname", "df", "free", "ps", "env",
+        "which", "man", "history", "clear", "help",
     ]
 
     # Check if command starts with an allowed prefix
