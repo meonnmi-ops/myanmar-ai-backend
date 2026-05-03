@@ -17,6 +17,7 @@ import requests as http_requests
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from storage_onedrive import register_storage_routes
 
 # Import NLP tools
 from nlp_tools import (
@@ -705,6 +706,9 @@ def api_nlp_info():
 # ============================================================
 # Main
 # ============================================================
+
+# Register OneDrive Storage API
+register_storage_routes(app)
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
