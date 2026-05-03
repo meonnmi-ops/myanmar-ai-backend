@@ -50,6 +50,15 @@ def _save_config():
     os.chmod(CONFIG_FILE, 0o600)
 
 
+def _clean(val, default=""):
+    """Clean user input - strip whitespace, handle placeholders"""
+    if val is None:
+        return default
+    val = val.strip()
+    if not val or val.lower() in ("(default)", "default", "n/a", "-"):
+        return default
+    return val
+
 def _init_config():
     """Interactive config setup"""
     print("=== MyanOS OneDrive Setup ===")
@@ -66,20 +75,20 @@ def _init_config():
             print("Cancelled.")
             return
     
-    client_id = input("Client ID [88672fdd-4f3e-451c-89de-af3beba86b5e]: ").strip() or "88672fdd-4f3e-451c-89de-af3beba86b5e"
+    client_id = _clean(input("Client ID [88672fdd-4f3e-451c-89de-af3beba86b5e]: "), "88672fdd-4f3e-451c-89de-af3beba86b5e")
     
-    client_secret = input("Client Secret: ").strip()
+    client_secret = _clean(input("Client Secret: "))
     if not client_secret:
         print("Client Secret is required!")
         sys.exit(1)
     
-    refresh_token = input("Refresh Token: ").strip()
+    refresh_token = _clean(input("Refresh Token: "))
     if not refresh_token:
         print("Refresh Token is required!")
         sys.exit(1)
     
-    tenant = input("Tenant [consumers]: ").strip() or "consumers"
-    root_folder = input("Root Folder [MyanOS]: ").strip() or "MyanOS"
+    tenant = _clean(input("Tenant [consumers]: "), "consumers")
+    root_folder = _clean(input("Root Folder [MyanOS]: "), "MyanOS")
     
     config = {
         "client_id": client_id,
