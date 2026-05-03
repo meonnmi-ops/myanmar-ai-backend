@@ -66,9 +66,7 @@ def _init_config():
             print("Cancelled.")
             return
     
-    client_id = input("Client ID [88672fdd-4f3e-451c-89de-af3beba86b5e]: ").strip()
-    if not client_id:
-        client_id = "88672fdd-4f3e-451c-89de-af3beba86b5e"
+    client_id = input("Client ID [88672fdd-4f3e-451c-89de-af3beba86b5e]: ").strip() or "88672fdd-4f3e-451c-89de-af3beba86b5e"
     
     client_secret = input("Client Secret: ").strip()
     if not client_secret:
